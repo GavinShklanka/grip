@@ -1,0 +1,263 @@
+{
+  "meta": {
+    "version": "1.0",
+    "description": "Baltic-Nordic energy corridor infrastructure topology",
+    "last_verified": "2026-04-03",
+    "sources": ["ENTSO-E grid map", "Elering", "Fingrid", "Litgrid", "AST", "ICDS Baltic Energy Interconnections Maps"]
+  },
+  "nodes": {
+    "countries": [
+      {
+        "id": "FI",
+        "name": "Finland",
+        "type": "focus",
+        "generation_capacity_mw": 22000,
+        "peak_demand_mw": 14500,
+        "avg_demand_mw": 9500,
+        "notes": "Nearly self-sufficient (3.8% imported 2024). Olkiluoto 3 added 1650 MW in 2023."
+      },
+      {
+        "id": "EE",
+        "name": "Estonia",
+        "type": "focus",
+        "generation_capacity_mw": 2800,
+        "peak_demand_mw": 1600,
+        "avg_demand_mw": 950,
+        "notes": "Imports ~38% of electricity. Narva oil shale is primary domestic generation."
+      },
+      {
+        "id": "LV",
+        "name": "Latvia",
+        "type": "focus",
+        "generation_capacity_mw": 2900,
+        "peak_demand_mw": 1300,
+        "avg_demand_mw": 800,
+        "notes": "~85% self-generation from Daugava hydropower (weather-dependent). Hosts Incukalns UGS."
+      },
+      {
+        "id": "LT",
+        "name": "Lithuania",
+        "type": "focus",
+        "generation_capacity_mw": 4200,
+        "peak_demand_mw": 2100,
+        "avg_demand_mw": 1300,
+        "notes": "Historically imported ~70% electricity (improving to ~37% in 2024). Operates Klaipeda LNG."
+      },
+      {
+        "id": "SE",
+        "name": "Sweden",
+        "type": "context",
+        "notes": "Source of NordBalt power to Lithuania via SE4 bidding zone."
+      },
+      {
+        "id": "PL",
+        "name": "Poland",
+        "type": "context",
+        "notes": "Sole synchronous AC connection to Continental Europe via LitPol Link. GIPL gas pipeline."
+      },
+      {
+        "id": "RU",
+        "name": "Russia",
+        "type": "context",
+        "notes": "Former BRELL partner. Electricity exports to FI cut May 2022. Gas exports ceased 2022."
+      },
+      {
+        "id": "DE",
+        "name": "Germany",
+        "type": "context",
+        "notes": "Connected to Finland via C-Lion1 telecom cable (not energy)."
+      }
+    ],
+    "interconnectors": [
+      {
+        "id": "estlink_1",
+        "name": "Estlink 1",
+        "type": "electric_hvdc",
+        "from": "FI",
+        "to": "EE",
+        "capacity_mw": 358,
+        "length_km": 105,
+        "submarine_km": 74,
+        "commissioned": 2007,
+        "vulnerability": "submarine_cable",
+        "notes": "HVDC Light. Oldest Baltic-Nordic interconnector."
+      },
+      {
+        "id": "estlink_2",
+        "name": "Estlink 2",
+        "type": "electric_hvdc",
+        "from": "FI",
+        "to": "EE",
+        "capacity_mw": 650,
+        "length_km": 170,
+        "submarine_km": 145,
+        "commissioned": 2014,
+        "vulnerability": "submarine_cable",
+        "notes": "HVDC classic. Damaged Dec 2024 (Eagle S), repaired June 2025."
+      },
+      {
+        "id": "nordbalt",
+        "name": "NordBalt",
+        "type": "electric_hvdc",
+        "from": "SE",
+        "to": "LT",
+        "capacity_mw": 700,
+        "length_km": 400,
+        "submarine_km": 400,
+        "commissioned": 2016,
+        "vulnerability": "submarine_cable",
+        "notes": "Suspected anchor damage Jan 2025 (Yi Peng 3 incident)."
+      },
+      {
+        "id": "litpol_link",
+        "name": "LitPol Link",
+        "type": "electric_ac",
+        "from": "PL",
+        "to": "LT",
+        "capacity_mw": 500,
+        "commercial_capacity_mw": 200,
+        "length_km": 163,
+        "submarine_km": 0,
+        "commissioned": 2015,
+        "vulnerability": "overland_line",
+        "notes": "Sole synchronous AC connection post-BRELL. Commercial capacity ~200-365 MW (2026), rising to 500 MW by 2027."
+      },
+      {
+        "id": "ee_lv_electric",
+        "name": "Estonia-Latvia AC Lines",
+        "type": "electric_ac",
+        "from": "EE",
+        "to": "LV",
+        "capacity_mw": 1500,
+        "length_km": 200,
+        "submarine_km": 0,
+        "commissioned": 1960,
+        "vulnerability": "overland_line",
+        "notes": "Three 330 kV AC lines. ~1400-1600 MW total capacity."
+      },
+      {
+        "id": "lv_lt_electric",
+        "name": "Latvia-Lithuania AC Lines",
+        "type": "electric_ac",
+        "from": "LV",
+        "to": "LT",
+        "capacity_mw": 1200,
+        "length_km": 150,
+        "submarine_km": 0,
+        "commissioned": 1960,
+        "vulnerability": "overland_line",
+        "notes": "Multiple 330 kV AC lines."
+      },
+      {
+        "id": "balticconnector",
+        "name": "Balticconnector",
+        "type": "gas_pipeline",
+        "from": "FI",
+        "to": "EE",
+        "capacity_mcm_day": 7.2,
+        "capacity_bcm_year": 2.6,
+        "length_km": 77,
+        "submarine_km": 77,
+        "commissioned": 2020,
+        "vulnerability": "submarine_pipeline",
+        "notes": "Damaged Oct 2023 (Newnew Polar Bear anchor), offline 6.5 months, repaired Apr 2024."
+      },
+      {
+        "id": "gipl",
+        "name": "GIPL",
+        "type": "gas_pipeline",
+        "from": "PL",
+        "to": "LT",
+        "capacity_mcm_day": 6.5,
+        "capacity_bcm_year": 2.4,
+        "length_km": 508,
+        "submarine_km": 0,
+        "commissioned": 2022,
+        "vulnerability": "overland_pipeline",
+        "notes": "Gas Interconnection Poland-Lithuania. Opened May 2022."
+      },
+      {
+        "id": "ee_lv_gas",
+        "name": "Estonia-Latvia Gas Pipeline",
+        "type": "gas_pipeline",
+        "from": "EE",
+        "to": "LV",
+        "capacity_mcm_day": 15,
+        "capacity_bcm_year": 5.5,
+        "length_km": 200,
+        "submarine_km": 0,
+        "commissioned": 1960,
+        "vulnerability": "overland_pipeline",
+        "notes": "Vireši-Tallinn pipeline. Main north-south gas artery."
+      }
+    ],
+    "facilities": [
+      {
+        "id": "klaipeda_lng",
+        "name": "Klaipėda LNG Terminal",
+        "type": "lng_terminal",
+        "country": "LT",
+        "capacity_bcm_year": 3.75,
+        "notes": "FSRU Independence. Covers ~90% of combined Baltic gas demand."
+      },
+      {
+        "id": "inkoo_fsru",
+        "name": "Inkoo FSRU",
+        "type": "lng_terminal",
+        "country": "FI",
+        "capacity_bcm_year": 5.0,
+        "notes": "FSRU Exemplar. Arrived Dec 2022. Finnish gas security anchor."
+      },
+      {
+        "id": "incukalns_ugs",
+        "name": "Inčukalns Underground Gas Storage",
+        "type": "gas_storage",
+        "country": "LV",
+        "capacity_bcm_active": 2.32,
+        "notes": "Only functional UGS in Baltic region. Seasonal balancing for four countries."
+      },
+      {
+        "id": "olkiluoto_3",
+        "name": "Olkiluoto 3",
+        "type": "nuclear_plant",
+        "country": "FI",
+        "capacity_mw": 1650,
+        "notes": "EPR reactor. Operational 2023. Largest single power unit in Finland."
+      },
+      {
+        "id": "narva_plants",
+        "name": "Narva Oil Shale Plants",
+        "type": "thermal_plant",
+        "country": "EE",
+        "capacity_mw": 1400,
+        "notes": "Estonia's primary domestic generation. Oil shale-fired. Declining capacity."
+      }
+    ],
+    "planned": [
+      {
+        "id": "harmony_link",
+        "name": "Harmony Link",
+        "type": "electric_ac",
+        "from": "PL",
+        "to": "LT",
+        "planned_capacity_mw": 700,
+        "expected_completion": "2029-2030",
+        "status": "permitting",
+        "notes": "Redesigned from offshore HVDC to overland 220kV AC. Construction tenders 2026. Crosses Suwałki Gap."
+      },
+      {
+        "id": "estlink_3",
+        "name": "EstLink 3",
+        "type": "electric_hvdc",
+        "from": "FI",
+        "to": "EE",
+        "planned_capacity_mw": 1000,
+        "expected_completion": "2035",
+        "status": "planning",
+        "notes": "MoU signed June 2022 between Elering and Fingrid."
+      }
+    ]
+  },
+  "reserve_requirement_mw": 1500,
+  "reserve_notes": "Post-BRELL, Baltics must hold ~1500 MW of reserve for frequency stability."
+}

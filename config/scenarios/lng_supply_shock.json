@@ -1,0 +1,15 @@
+{
+  "id": "lng_supply_shock",
+  "name": "LNG Supply Shock",
+  "description": "Klaipėda LNG terminal offline (maintenance or supply disruption). 3.75 bcm/year capacity lost.",
+  "category": "energy",
+  "overrides": [
+    {"facility_id": "klaipeda_lng", "status": "offline", "rationale": "Terminal offline — FSRU maintenance or LNG supply disruption"}
+  ],
+  "expected_impacts": {
+    "LT": "Primary gas supply lost. Falls back to GIPL (Poland) and Inčukalns storage (Latvia).",
+    "LV": "Increased draw on Inčukalns storage.",
+    "EE": "Reduced gas availability through north-south pipeline."
+  },
+  "historical_reference": "No historical precedent — Klaipėda has been continuously operational. Scenario is exploratory."
+}

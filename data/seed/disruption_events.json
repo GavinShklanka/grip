@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "version": "1.0",
+    "description": "12 documented Baltic infrastructure disruption events (2022-2026). Ground truth for backtesting.",
+    "positive_labels_note": "Events marked is_energy_interconnector=true are positive labels for the risk model (6 events). Others are contextual."
+  },
+  "events": [
+    {
+      "event_id": "E01",
+      "name": "Russia cuts electricity to Finland",
+      "start_date": "2022-05-14",
+      "end_date": "2022-05-14",
+      "affected_edges": [],
+      "affected_facilities": [],
+      "severity": "moderate",
+      "is_energy_interconnector": false,
+      "description": "Russia cut electricity exports to Finland (~10% of consumption). Fingrid described adjustment as 'not difficult'.",
+      "source": "Fingrid press release, May 2022"
+    },
+    {
+      "event_id": "E02",
+      "name": "Russia cuts gas to Finland",
+      "start_date": "2022-05-21",
+      "end_date": "2022-05-21",
+      "affected_edges": [],
+      "affected_facilities": [],
+      "severity": "moderate",
+      "is_energy_interconnector": false,
+      "description": "Russia cut gas after Gasum refused ruble payments. ~75% of regional gas demand was Russian. Baltic states stopped Russian gas imports within two months.",
+      "source": "Gasum press release, May 2022"
+    },
+    {
+      "event_id": "E03",
+      "name": "Nord Stream sabotage",
+      "start_date": "2022-09-26",
+      "end_date": "2022-09-26",
+      "affected_edges": [],
+      "affected_facilities": [],
+      "severity": "critical",
+      "is_energy_interconnector": false,
+      "description": "Underwater explosions ruptured 3 of 4 Nord Stream pipeline strings near Bornholm. Pipelines were not flowing but destruction was permanent. Largest human-caused methane release in history.",
+      "source": "NORSAR seismic data, multiple investigations"
+    },
+    {
+      "event_id": "E04",
+      "name": "Balticconnector anchor damage",
+      "start_date": "2023-10-08",
+      "end_date": "2024-04-22",
+      "affected_edges": ["balticconnector"],
+      "affected_facilities": [],
+      "severity": "critical",
+      "is_energy_interconnector": true,
+      "description": "Balticconnector gas pipeline pressure dropped from 34.5 to 6 bar overnight. Newnew Polar Bear anchor caused 4m-wide drag marks. China acknowledged responsibility Aug 2024. Offline 6.5 months. Cost ~€35-40M. No gas shortages occurred.",
+      "source": "Finnish NBI investigation, ENTSOG flow data"
+    },
+    {
+      "event_id": "E05",
+      "name": "Estlink 2 technical fault (Jan 2024)",
+      "start_date": "2024-01-26",
+      "end_date": "2024-09-04",
+      "affected_edges": ["estlink_2"],
+      "affected_facilities": [],
+      "severity": "high",
+      "is_energy_interconnector": true,
+      "description": "Estlink 2 fault in geotechnically demanding area on Estonian coast. Offline ~7.5 months. FI-EE capacity reduced from 1008 MW to 358 MW.",
+      "source": "Elering/Fingrid UMM, ENTSO-E outage data"
+    },
+    {
+      "event_id": "E06",
+      "name": "BCS East-West / C-Lion1 double cable strike",
+      "start_date": "2024-11-17",
+      "end_date": "2024-11-28",
+      "affected_edges": [],
+      "affected_facilities": [],
+      "severity": "high",
+      "is_energy_interconnector": false,
+      "description": "Yi Peng 3 severed BCS East-West (SE-LT telecom) and C-Lion1 (FI-DE telecom) within 18 hours. Ship turned off AIS for 7.5 hours. Also damaged NordBalt power cable (drag traces found). Both telecom cables restored ~10 days.",
+      "source": "Swedish/Finnish/German investigations, AIS data"
+    },
+    {
+      "event_id": "E07",
+      "name": "NordBalt suspected anchor damage",
+      "start_date": "2024-11-17",
+      "end_date": "2024-11-30",
+      "affected_edges": ["nordbalt"],
+      "affected_facilities": [],
+      "severity": "moderate",
+      "is_energy_interconnector": true,
+      "description": "Swedish authorities found anchor drag traces on NordBalt power cable from Yi Peng 3 incident. Cable remained operational but with suspected damage.",
+      "source": "Swedish Maritime Administration"
+    },
+    {
+      "event_id": "E08",
+      "name": "Eagle S Estlink 2 severance + multi-cable damage",
+      "start_date": "2024-12-25",
+      "end_date": "2025-06-25",
+      "affected_edges": ["estlink_2"],
+      "affected_facilities": [],
+      "severity": "critical",
+      "is_energy_interconnector": true,
+      "description": "Eagle S (shadow fleet tanker, Cook Islands flag, Russian gasoline from Ust-Luga) dragged anchor ~90km. Severed Estlink 2 (650 MW) plus 4 telecom cables including C-Lion1 again. Finnish special forces boarded vessel before it reached Estlink 1. FI-EE capacity dropped 65% (1016→358 MW). Repair cost €50-60M.",
+      "source": "Fingrid/Elering, Finnish Border Guard, Nexans repair reports"
+    },
+    {
+      "event_id": "E09",
+      "name": "Latvia-Sweden telecom cable cut",
+      "start_date": "2025-01-26",
+      "end_date": "2025-02-15",
+      "affected_edges": [],
+      "affected_facilities": [],
+      "severity": "low",
+      "is_energy_interconnector": false,
+      "description": "Latvia-Sweden telecom cable severed. Later ruled accidental.",
+      "source": "Latvian authorities"
+    },
+    {
+      "event_id": "E10",
+      "name": "BRELL desynchronization",
+      "start_date": "2025-02-08",
+      "end_date": "2025-02-09",
+      "affected_edges": [],
+      "affected_facilities": [],
+      "severity": "high",
+      "is_energy_interconnector": false,
+      "description": "Baltic states disconnected from Russian BRELL grid and synchronized with Continental Europe via Poland. Operated in island mode ~24 hours. €1.2B EU-funded project. LitPol Link commercial capacity dropped from 500 to ~150 MW as it shifted to grid stability function.",
+      "source": "Elering/Litgrid/AST joint announcement, ENTSO-E flow data"
+    },
+    {
+      "event_id": "E11",
+      "name": "Estlink 1 outage (Sep 2025)",
+      "start_date": "2025-09-01",
+      "end_date": "2025-10-15",
+      "affected_edges": ["estlink_1"],
+      "affected_facilities": [],
+      "severity": "moderate",
+      "is_energy_interconnector": true,
+      "description": "Estlink 1 out of service. Details limited from Elering news archive.",
+      "source": "Elering news, Sep 2025"
+    },
+    {
+      "event_id": "E12",
+      "name": "Kiisa battery fault — both Estlinks trip",
+      "start_date": "2026-01-20",
+      "end_date": "2026-01-21",
+      "affected_edges": ["estlink_1", "estlink_2"],
+      "affected_facilities": [],
+      "severity": "critical",
+      "is_energy_interconnector": true,
+      "description": "100 MW/200 MWh battery at Kiisa (near Tallinn) caused oscillations during grid connection testing, tripping both Estlinks. ~1000 MW lost (20% Baltic winter load). LitPol operated at double rated capacity to compensate. Reserve capacity deployed. Endogenous failure, not sabotage.",
+      "source": "Elering statement, Energy Storage News Jan 2026"
+    }
+  ]
+}

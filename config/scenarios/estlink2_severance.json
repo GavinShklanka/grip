@@ -1,0 +1,14 @@
+{
+  "id": "estlink2_severance",
+  "name": "Estlink 2 Severance",
+  "description": "Loss of Estlink 2 submarine cable (650 MW). Modeled after Dec 2024 Eagle S incident.",
+  "category": "submarine_cable",
+  "overrides": [
+    {"edge_id": "estlink_2", "status": "offline", "rationale": "Cable severed by anchor dragging"}
+  ],
+  "expected_impacts": {
+    "EE": "Loss of 650 MW import capacity from Finland. N-1 margin significantly reduced.",
+    "FI": "Minor — Finland is nearly self-sufficient. Reduced export revenue."
+  },
+  "historical_reference": "2024-12-25 Eagle S incident. Estlink 2 offline for ~6 months."
+}

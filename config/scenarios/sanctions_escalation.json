@@ -1,0 +1,15 @@
+{
+  "id": "sanctions_escalation",
+  "name": "Sanctions Escalation",
+  "description": "Major new sanctions tranche affecting Baltic transit trade and shadow fleet operations.",
+  "category": "sanctions",
+  "overrides": [
+    {"indicator_id": "sanctions_entity_count", "override_value": 95, "rationale": "Major expansion of EU sanctions list"},
+    {"indicator_id": "shadow_fleet_count", "override_value": 90, "rationale": "Shadow fleet activity spikes in response to sanctions"},
+    {"indicator_id": "trade_volume_delta", "override_value": 75, "rationale": "Trade disruption from new restrictions"}
+  ],
+  "expected_impacts": {
+    "all": "Elevated sanctions_pressure domain scores. Potential cascade to shadow fleet risk indicators. Trade volume disruption."
+  },
+  "historical_reference": "Modeled after cumulative EU sanctions packages 2022-2024."
+}

@@ -1,0 +1,16 @@
+{
+  "id": "multi_cable_attack",
+  "name": "Multi-Infrastructure Attack",
+  "description": "Simultaneous loss of Estlink 2 and Estlink 1. Modeled after Jan 2026 simultaneous trip (both Estlinks lost).",
+  "category": "multi_domain",
+  "overrides": [
+    {"edge_id": "estlink_1", "status": "offline", "rationale": "Simultaneous cable failure"},
+    {"edge_id": "estlink_2", "status": "offline", "rationale": "Simultaneous cable failure"}
+  ],
+  "expected_impacts": {
+    "EE": "Total loss of Finland import capacity (1008 MW). Severe N-1 violation. Relies entirely on Latvia south link.",
+    "LV": "Increased burden as sole electricity supplier to Estonia from south.",
+    "LT": "Indirect — may need to increase NordBalt and LitPol imports to compensate regional deficit."
+  },
+  "historical_reference": "2026-01-20 Kiisa battery testing fault tripped both Estlinks. ~1000 MW lost. LitPol operated at double rated capacity."
+}

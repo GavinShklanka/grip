@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "version": "1.0",
+    "description": "Alert thresholds for domain scores, N-1 margins, and risk model",
+    "note": "All thresholds are adjustable. Review after initial scoring reveals actual score distributions."
+  },
+  "domain_thresholds": {
+    "watch": 50,
+    "warning": 70,
+    "critical": 85
+  },
+  "margin_thresholds_mw": {
+    "green_above": 500,
+    "amber_above": 0,
+    "red_below": 0
+  },
+  "risk_model_thresholds": {
+    "watch": 0.30,
+    "warning": 0.50,
+    "critical": 0.70
+  },
+  "structural_alerts": {
+    "interconnectors_offline_warning": 1,
+    "interconnectors_offline_critical": 2,
+    "anomaly_zscore_threshold": 2.0
+  }
+}

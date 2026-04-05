@@ -1,0 +1,113 @@
+{
+  "events": [
+    {
+      "event_name": "Balticconnector anchor damage",
+      "event_date": "2023-10-08",
+      "peak_risk_30d": 0.5944565089411609,
+      "mean_risk_30d": 0.37927366706493,
+      "was_elevated": true
+    },
+    {
+      "event_name": "Estlink 2 technical fault (Jan 2024)",
+      "event_date": "2024-01-26",
+      "peak_risk_30d": 0.5795671233183096,
+      "mean_risk_30d": 0.28198146566479304,
+      "was_elevated": true
+    },
+    {
+      "event_name": "NordBalt suspected anchor damage",
+      "event_date": "2024-11-17",
+      "peak_risk_30d": 0.672253027473824,
+      "mean_risk_30d": 0.379153034393332,
+      "was_elevated": true
+    },
+    {
+      "event_name": "Eagle S Estlink 2 severance + multi-cable damage",
+      "event_date": "2024-12-25",
+      "peak_risk_30d": 0.6531723854237181,
+      "mean_risk_30d": 0.40630702689940645,
+      "was_elevated": true
+    },
+    {
+      "event_name": "Estlink 1 outage (Sep 2025)",
+      "event_date": "2025-09-01",
+      "peak_risk_30d": 0.5959963241945591,
+      "mean_risk_30d": 0.3417112798678476,
+      "was_elevated": true
+    },
+    {
+      "event_name": "Kiisa battery fault \u2014 both Estlinks trip",
+      "event_date": "2026-01-20",
+      "peak_risk_30d": 0.6139005163035953,
+      "mean_risk_30d": 0.431949302202378,
+      "was_elevated": true
+    }
+  ],
+  "model_brier": 0.21456439940324282,
+  "naive_brier": 0.023382295137878713,
+  "feature_importances": [
+    {
+      "name": "energy_dependence_mean_7d",
+      "importance": 0.16121566695086503
+    },
+    {
+      "name": "energy_dependence",
+      "importance": 0.10760618207808723
+    },
+    {
+      "name": "supply_route_disruption_volatility_7d",
+      "importance": 0.10657425275649551
+    },
+    {
+      "name": "supply_route_disruption_mean_7d",
+      "importance": 0.0779096372403736
+    },
+    {
+      "name": "geopolitical_tension_mean_7d",
+      "importance": 0.05374216202343467
+    },
+    {
+      "name": "energy_dependence_volatility_7d",
+      "importance": 0.05148692391217922
+    },
+    {
+      "name": "infrastructure_vulnerability_mean_7d",
+      "importance": 0.05075505158601715
+    },
+    {
+      "name": "sanctions_pressure_mean_7d",
+      "importance": 0.05016756774511841
+    },
+    {
+      "name": "infrastructure_vulnerability_volatility_7d",
+      "importance": 0.04898476688121011
+    },
+    {
+      "name": "infrastructure_vulnerability",
+      "importance": 0.04126820569794897
+    },
+    {
+      "name": "geopolitical_tension_volatility_7d",
+      "importance": 0.03880871246655158
+    },
+    {
+      "name": "supply_route_disruption_vel",
+      "importance": 0.03820657002089676
+    },
+    {
+      "name": "sanctions_pressure",
+      "importance": 0.038056405412719534
+    },
+    {
+      "name": "supply_route_disruption",
+      "importance": 0.035969314456626586
+    },
+    {
+      "name": "energy_dependence_vel",
+      "importance": 0.029919296573962598
+    }
+  ],
+  "elevated_count": 6,
+  "total_events": 6,
+  "base_rate": 0.023956194387405885
+}

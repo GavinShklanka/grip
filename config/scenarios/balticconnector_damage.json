@@ -1,0 +1,14 @@
+{
+  "id": "balticconnector_damage",
+  "name": "Balticconnector Pipeline Damage",
+  "description": "Loss of Balticconnector gas pipeline (7.2 mcm/day). Modeled after Oct 2023 Newnew Polar Bear incident.",
+  "category": "pipeline",
+  "overrides": [
+    {"edge_id": "balticconnector", "status": "offline", "rationale": "Submarine pipeline anchor damage"}
+  ],
+  "expected_impacts": {
+    "FI": "Loss of pipeline gas import from Estonia. Inkoo FSRU compensates.",
+    "EE": "Reduced gas transit capacity. Relies on reverse flow from Latvia."
+  },
+  "historical_reference": "2023-10-08 Newnew Polar Bear incident. Pipeline offline 6.5 months. No gas shortages occurred."
+}

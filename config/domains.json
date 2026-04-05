@@ -1,0 +1,372 @@
+{
+  "meta": {
+    "version": "1.0",
+    "description": "GRIP domain definitions with indicator mappings and weights",
+    "weight_note": "Per-domain indicator weights must sum to 1.0. Domain weights in escalation composite must sum to 1.0.",
+    "normalization_note": "All indicators normalized to 0-100 scale. Higher score = greater stress/risk."
+  },
+  "domains": [
+    {
+      "id": "energy_dependence",
+      "name": "Energy Dependence",
+      "layer": "descriptive",
+      "weight_in_composite": 0.2,
+      "description": "Concentration risk and import dependency in energy supply",
+      "indicators": [
+        {
+          "id": "electricity_import_ratio",
+          "name": "Electricity Import Ratio",
+          "source": "entso_e",
+          "unit": "ratio",
+          "direction": "higher_is_worse",
+          "normalization": "minmax",
+          "weight": 0.2,
+          "description": "Net imports / total consumption. Higher = more dependent."
+        },
+        {
+          "id": "gas_import_concentration",
+          "name": "Gas Import Source Concentration",
+          "source": "entsog",
+          "unit": "hhi",
+          "direction": "higher_is_worse",
+          "normalization": "minmax",
+          "weight": 0.15,
+          "description": "HHI of gas import sources. Single-source = high concentration."
+        },
+        {
+          "id": "estlink_utilization",
+          "name": "Estlink Utilization Rate",
+          "source": "entso_e",
+          "unit": "ratio",
+          "direction": "higher_is_worse",
+          "normalization": "minmax",
+          "weight": 0.15,
+          "description": "Average flow / total Estlink capacity. Near 1.0 = no headroom."
+        },
+        {
+          "id": "lng_utilization",
+          "name": "LNG Terminal Utilization",
+          "source": "entsog",
+          "unit": "ratio",
+          "direction": "higher_is_worse",
+          "normalization": "minmax",
+          "weight": 0.1,
+          "description": "LNG sendout / terminal capacity. High utilization = low buffer."
+        },
+        {
+          "id": "interconnectors_offline",
+          "name": "Interconnectors Currently Offline",
+          "source": "entso_e",
+          "unit": "count",
+          "direction": "higher_is_worse",
+          "normalization": "minmax",
+          "weight": 0.4,
+          "description": "Count of major interconnectors currently in unplanned outage."
+        }
+      ]
+    },
+    {
+      "id": "infrastructure_vulnerability",
+      "name": "Infrastructure Vulnerability",
+      "layer": "descriptive",
+      "weight_in_composite": 0.2,
+      "description": "Exposure and fragility of critical energy infrastructure",
+      "indicators": [
+        {
+          "id": "interconnectors_offline",
+          "name": "Interconnectors Currently Offline",
+          "source": "entso_e",
+          "unit": "count",
+          "direction": "higher_is_worse",
+          "normalization": "minmax",
+          "weight": 0.35,
+          "description": "Count of major interconnectors currently in unplanned outage."
+        },
+        {
+          "id": "n1_margin_deficit",
+          "name": "N-1 Margin Deficit",
+          "source": "computed",
+          "unit": "mw",
+          "direction": "higher_is_worse",
+          "normalization": "minmax",
+          "weight": 0.35,
+          "description": "Max(0, reserve_requirement - available_margin). Zero when margin adequate."
+        },
+        {
+          "id": "submarine_cable_exposure",
+          "name": "Submarine Cable Exposure Ratio",
+          "source": "static",
+          "unit": "ratio",
+          "direction": "higher_is_worse",
+          "normalization": "minmax",
+          "weight": 0.15,
+          "description": "Fraction of import capacity carried by submarine cables."
+        },
+        {
+          "id": "days_since_last_disruption",
+          "name": "Days Since Last Disruption (inverted)",
+          "source": "computed",
+          "unit": "days",
+          "direction": "lower_is_worse",
+          "normalization": "minmax",
+          "weight": 0.15,
+          "description": "Days since most recent interconnector outage. Low = recent event = elevated concern."
+        }
+      ]
+    },
+    {
+      "id": "supply_route_disruption",
+      "name": "Supply-Route Disruption",
+      "layer": "descriptive",
+      "weight_in_composite": 0.15,
+      "description": "Corridor viability and chokepoint stress",
+      "indicators": [
+        {
+          "id": "cross_border_flow_anomaly",
+          "name": "Cross-Border Flow Anomaly Score",
+          "source": "entso_e",
+          "unit": "z_score",
+          "direction": "higher_is_worse",
+          "normalization": "percentile",
+          "weight": 0.35,
+          "description": "Z-score deviation of current flows from 30-day rolling mean. Large negative = unusual drop."
+        },
+        {
+          "id": "gas_flow_disruption",
+          "name": "Gas Flow Disruption Indicator",
+          "source": "entsog",
+          "unit": "z_score",
+          "direction": "higher_is_worse",
+          "normalization": "percentile",
+          "weight": 0.3,
+          "description": "Z-score of gas flows vs 30-day mean. Abrupt drops flag disruption."
+        },
+        {
+          "id": "telecom_cables_offline",
+          "name": "Telecom Cables Offline",
+          "source": "static",
+          "unit": "count",
+          "direction": "higher_is_worse",
+          "normalization": "minmax",
+          "weight": 0.2,
+          "description": "Count of known Baltic telecom cable outages."
+        },
+        {
+          "id": "corridor_alternative_available",
+          "name": "Alternative Route Availability (inverted)",
+          "source": "computed",
+          "unit": "boolean",
+          "direction": "lower_is_worse",
+          "normalization": "minmax",
+          "weight": 0.15,
+          "description": "Whether bypass routes exist for disrupted corridors. 0 = no alternative."
+        }
+      ]
+    },
+    {
+      "id": "sanctions_pressure",
+      "name": "Sanctions & Trade Pressure",
+      "layer": "descriptive",
+      "weight_in_composite": 0.1,
+      "description": "Economic coercion intensity affecting the corridor",
+      "indicators": [
+        {
+          "id": "sanctions_entity_count",
+          "name": "Active Sanctions Entities (Baltic-relevant)",
+          "source": "opensanctions",
+          "unit": "count",
+          "direction": "higher_is_worse",
+          "normalization": "minmax",
+          "weight": 0.3,
+          "description": "Count of EU-sanctioned entities relevant to Baltic energy/trade."
+        },
+        {
+          "id": "trade_volume_delta",
+          "name": "Trade Volume Change (HS 27xx)",
+          "source": "eurostat",
+          "unit": "percent_change",
+          "direction": "contextual",
+          "normalization": "minmax",
+          "weight": 0.3,
+          "description": "Month-over-month change in mineral fuel trade volume."
+        },
+        {
+          "id": "shadow_fleet_count",
+          "name": "Shadow Fleet Vessels in Baltic",
+          "source": "static",
+          "unit": "count",
+          "direction": "higher_is_worse",
+          "normalization": "minmax",
+          "weight": 0.4,
+          "description": "Estimated count of shadow fleet vessels transiting Baltic Sea."
+        }
+      ]
+    },
+    {
+      "id": "geopolitical_tension",
+      "name": "Geopolitical Tension",
+      "layer": "descriptive",
+      "weight_in_composite": 0.1,
+      "description": "Regional diplomatic and security tension level",
+      "indicators": [
+        {
+          "id": "gdelt_event_intensity",
+          "name": "GDELT Event Intensity (Baltic+Russia)",
+          "source": "gdelt",
+          "unit": "events_per_week",
+          "direction": "higher_is_worse",
+          "normalization": "percentile",
+          "weight": 0.4,
+          "description": "Weekly count of conflict/coercion events involving Baltic + Russia actors."
+        },
+        {
+          "id": "gdelt_tone_avg",
+          "name": "GDELT Average Tone (Baltic+Russia)",
+          "source": "gdelt",
+          "unit": "tone_score",
+          "direction": "lower_is_worse",
+          "normalization": "minmax",
+          "weight": 0.3,
+          "description": "Average media tone. Negative tone = elevated tension."
+        },
+        {
+          "id": "diplomatic_incident_count",
+          "name": "Diplomatic Incidents",
+          "source": "gdelt",
+          "unit": "count",
+          "direction": "higher_is_worse",
+          "normalization": "minmax",
+          "weight": 0.3,
+          "description": "Ambassador recalls, expulsions, protests from GDELT CAMEO codes."
+        }
+      ]
+    },
+    {
+      "id": "alliance_alignment",
+      "name": "Alliance Alignment",
+      "layer": "descriptive",
+      "weight_in_composite": 0.08,
+      "description": "NATO and EU alliance cohesion and burden-sharing",
+      "indicators": [
+        {
+          "id": "defense_spending_gdp",
+          "name": "Defense Spending (% GDP)",
+          "source": "static",
+          "unit": "percent",
+          "direction": "contextual",
+          "normalization": "minmax",
+          "weight": 0.35,
+          "description": "NATO guideline is 2%. Below 2% = below commitment."
+        },
+        {
+          "id": "nato_exercise_frequency",
+          "name": "NATO Exercise Frequency (Baltic region)",
+          "source": "gdelt",
+          "unit": "events_per_quarter",
+          "direction": "contextual",
+          "normalization": "minmax",
+          "weight": 0.35,
+          "description": "Count of NATO exercise events in Baltic region from GDELT."
+        },
+        {
+          "id": "alliance_voting_alignment",
+          "name": "UNGA Voting Alignment",
+          "source": "static",
+          "unit": "score",
+          "direction": "lower_is_worse",
+          "normalization": "minmax",
+          "weight": 0.3,
+          "description": "Voting alignment between Baltic states and key NATO allies."
+        }
+      ]
+    },
+    {
+      "id": "comms_logistics_stress",
+      "name": "Communications & Logistics Stress",
+      "layer": "descriptive",
+      "weight_in_composite": 0.07,
+      "description": "Strain on communications and transport networks",
+      "indicators": [
+        {
+          "id": "telecom_cable_status",
+          "name": "Telecom Cable Health Score",
+          "source": "static",
+          "unit": "score",
+          "direction": "lower_is_worse",
+          "normalization": "minmax",
+          "weight": 0.5,
+          "description": "Fraction of known Baltic telecom cables operational."
+        },
+        {
+          "id": "baltic_shipping_index",
+          "name": "Baltic Shipping Stress Proxy",
+          "source": "static",
+          "unit": "index",
+          "direction": "higher_is_worse",
+          "normalization": "minmax",
+          "weight": 0.25,
+          "description": "Proxy for shipping disruption from insurance rate changes."
+        },
+        {
+          "id": "cross_border_transit_delays",
+          "name": "Cross-Border Transit Delays",
+          "source": "static",
+          "unit": "hours",
+          "direction": "higher_is_worse",
+          "normalization": "minmax",
+          "weight": 0.25,
+          "description": "Average delay at Baltic border crossings."
+        }
+      ]
+    },
+    {
+      "id": "strategic_readiness",
+      "name": "Strategic Readiness",
+      "layer": "readiness",
+      "weight_in_composite": 0.1,
+      "description": "Aggregate, non-operational defense posture and industrial capacity",
+      "indicators": [
+        {
+          "id": "defense_spending_trend",
+          "name": "Defense Spending Trend (3-year)",
+          "source": "static",
+          "unit": "percent_change",
+          "direction": "lower_is_worse",
+          "normalization": "minmax",
+          "weight": 0.35,
+          "description": "3-year trend in defense spending. Declining = less prepared."
+        },
+        {
+          "id": "reserve_to_active_ratio",
+          "name": "Reserve-to-Active Military Ratio",
+          "source": "static",
+          "unit": "ratio",
+          "direction": "lower_is_worse",
+          "normalization": "minmax",
+          "weight": 0.3,
+          "description": "Ratio of reserve to active military personnel. Aggregate only."
+        },
+        {
+          "id": "industrial_capacity_utilization",
+          "name": "Industrial Capacity Utilization",
+          "source": "eurostat",
+          "unit": "percent",
+          "direction": "higher_is_worse",
+          "normalization": "minmax",
+          "weight": 0.35,
+          "description": "High utilization = less surge capacity for crisis response."
+        }
+      ]
+    }
+  ],
+  "composite": {
+    "id": "escalation_risk",
+    "name": "Escalation Risk",
+    "layer": "composite",
+    "description": "Weighted composite of domains 1-8 with velocity multiplier. Not independently scored from raw indicators.",
+    "method": "weighted_average_with_velocity",
+    "velocity_multiplier_alpha": 0.3,
+    "velocity_multiplier_cap": 1.5,
+    "notes": "composite = sum(w_i * score_i * min(1 + alpha * velocity_i, cap)). Velocity is 7-day rate of change normalized to points/day."
+  }
+}

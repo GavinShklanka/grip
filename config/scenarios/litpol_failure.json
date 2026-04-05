@@ -1,0 +1,16 @@
+{
+  "id": "litpol_failure",
+  "name": "LitPol Link Failure",
+  "description": "Loss of sole synchronous AC connection to Continental Europe. Baltics forced into island mode.",
+  "category": "corridor",
+  "overrides": [
+    {"edge_id": "litpol_link", "status": "offline", "rationale": "LitPol Link outage — overland line failure or sabotage"}
+  ],
+  "expected_impacts": {
+    "LT": "Loss of synchronous connection to Continental Europe. Grid frequency must be maintained internally.",
+    "LV": "No direct Continental connection. Relies on internal Baltic generation.",
+    "EE": "No direct Continental connection. Nordic links (Estlinks) become sole external connections.",
+    "all": "Baltic states operate in island mode. Emergency reserves activated. NordBalt becomes critical for Lithuanian supply."
+  },
+  "historical_reference": "No full outage precedent. BRELL desynchronization (Feb 2025) was planned; this scenario is unplanned."
+}
