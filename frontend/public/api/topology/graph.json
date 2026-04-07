@@ -1,0 +1,179 @@
+{
+  "graph": {
+    "directed": false,
+    "multigraph": true,
+    "graph": {},
+    "nodes": [
+      {
+        "id": "FI",
+        "name": "Finland",
+        "type": "focus",
+        "generation_capacity_mw": 22000,
+        "peak_demand_mw": 14500,
+        "avg_demand_mw": 9500,
+        "notes": "Nearly self-sufficient (3.8% imported 2024). Olkiluoto 3 added 1650 MW in 2023."
+      },
+      {
+        "id": "EE",
+        "name": "Estonia",
+        "type": "focus",
+        "generation_capacity_mw": 2800,
+        "peak_demand_mw": 1600,
+        "avg_demand_mw": 950,
+        "notes": "Imports ~38% of electricity. Narva oil shale is primary domestic generation."
+      },
+      {
+        "id": "LV",
+        "name": "Latvia",
+        "type": "focus",
+        "generation_capacity_mw": 2900,
+        "peak_demand_mw": 1300,
+        "avg_demand_mw": 800,
+        "notes": "~85% self-generation from Daugava hydropower (weather-dependent). Hosts Incukalns UGS."
+      },
+      {
+        "id": "LT",
+        "name": "Lithuania",
+        "type": "focus",
+        "generation_capacity_mw": 4200,
+        "peak_demand_mw": 2100,
+        "avg_demand_mw": 1300,
+        "notes": "Historically imported ~70% electricity (improving to ~37% in 2024). Operates Klaipeda LNG."
+      },
+      {
+        "id": "SE",
+        "name": "Sweden",
+        "type": "context",
+        "notes": "Source of NordBalt power to Lithuania via SE4 bidding zone."
+      },
+      {
+        "id": "PL",
+        "name": "Poland",
+        "type": "context",
+        "notes": "Sole synchronous AC connection to Continental Europe via LitPol Link. GIPL gas pipeline."
+      },
+      {
+        "id": "RU",
+        "name": "Russia",
+        "type": "context",
+        "notes": "Former BRELL partner. Electricity exports to FI cut May 2022. Gas exports ceased 2022."
+      },
+      {
+        "id": "DE",
+        "name": "Germany",
+        "type": "context",
+        "notes": "Connected to Finland via C-Lion1 telecom cable (not energy)."
+      }
+    ],
+    "links": [
+      {
+        "edge_id": "estlink_1",
+        "type": "electric_hvdc",
+        "capacity_mw": 358.0,
+        "capacity_mcm": 0.0,
+        "vulnerability": "submarine_cable",
+        "status": "active",
+        "source": "FI",
+        "target": "EE",
+        "key": "estlink_1",
+        "active_capacity_mw": 358.0
+      },
+      {
+        "edge_id": "estlink_2",
+        "type": "electric_hvdc",
+        "capacity_mw": 650.0,
+        "capacity_mcm": 0.0,
+        "vulnerability": "submarine_cable",
+        "status": "active",
+        "source": "FI",
+        "target": "EE",
+        "key": "estlink_2",
+        "active_capacity_mw": 650.0
+      },
+      {
+        "edge_id": "balticconnector",
+        "type": "gas_pipeline",
+        "capacity_mw": 0.0,
+        "capacity_mcm": 7.2,
+        "vulnerability": "submarine_pipeline",
+        "status": "active",
+        "source": "FI",
+        "target": "EE",
+        "key": "balticconnector",
+        "active_capacity_mw": 0.0
+      },
+      {
+        "edge_id": "ee_lv_electric",
+        "type": "electric_ac",
+        "capacity_mw": 1500.0,
+        "capacity_mcm": 0.0,
+        "vulnerability": "overland_line",
+        "status": "active",
+        "source": "EE",
+        "target": "LV",
+        "key": "ee_lv_electric",
+        "active_capacity_mw": 1500.0
+      },
+      {
+        "edge_id": "ee_lv_gas",
+        "type": "gas_pipeline",
+        "capacity_mw": 0.0,
+        "capacity_mcm": 15.0,
+        "vulnerability": "overland_pipeline",
+        "status": "active",
+        "source": "EE",
+        "target": "LV",
+        "key": "ee_lv_gas",
+        "active_capacity_mw": 0.0
+      },
+      {
+        "edge_id": "lv_lt_electric",
+        "type": "electric_ac",
+        "capacity_mw": 1200.0,
+        "capacity_mcm": 0.0,
+        "vulnerability": "overland_line",
+        "status": "active",
+        "source": "LV",
+        "target": "LT",
+        "key": "lv_lt_electric",
+        "active_capacity_mw": 1200.0
+      },
+      {
+        "edge_id": "nordbalt",
+        "type": "electric_hvdc",
+        "capacity_mw": 700.0,
+        "capacity_mcm": 0.0,
+        "vulnerability": "submarine_cable",
+        "status": "active",
+        "source": "LT",
+        "target": "SE",
+        "key": "nordbalt",
+        "active_capacity_mw": 700.0
+      },
+      {
+        "edge_id": "litpol_link",
+        "type": "electric_ac",
+        "capacity_mw": 200.0,
+        "capacity_mcm": 0.0,
+        "vulnerability": "overland_line",
+        "status": "active",
+        "source": "LT",
+        "target": "PL",
+        "key": "litpol_link",
+        "active_capacity_mw": 200.0
+      },
+      {
+        "edge_id": "gipl",
+        "type": "gas_pipeline",
+        "capacity_mw": 0.0,
+        "capacity_mcm": 6.5,
+        "vulnerability": "overland_pipeline",
+        "status": "active",
+        "source": "LT",
+        "target": "PL",
+        "key": "gipl",
+        "active_capacity_mw": 0.0
+      }
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "alerts": [
+    {
+      "country_id": "EE",
+      "domain_id": "supply_route_disruption",
+      "timestamp": "2026-04-06T00:00:00",
+      "velocity_deviation": 2.070632099521804,
+      "type": "statistical_anomaly"
+    },
+    {
+      "country_id": "EE",
+      "domain_id": "comms_logistics_stress",
+      "timestamp": "2026-04-06T00:00:00",
+      "velocity_deviation": 7.142857142857143,
+      "type": "statistical_anomaly"
+    },
+    {
+      "country_id": "LT",
+      "domain_id": "supply_route_disruption",
+      "timestamp": "2026-04-06T00:00:00",
+      "velocity_deviation": 2.07184155179995,
+      "type": "statistical_anomaly"
+    },
+    {
+      "country_id": "LV",
+      "domain_id": "comms_logistics_stress",
+      "timestamp": "2026-04-06T00:00:00",
+      "velocity_deviation": 2.8764070373116266,
+      "type": "statistical_anomaly"
+    },
+    {
+      "country_id": "FI",
+      "domain_id": "infrastructure_vulnerability",
+      "timestamp": "2026-04-06T00:00:00",
+      "velocity_deviation": 1.3282568488644713,
+      "type": "statistical_anomaly"
+    },
+    {
+      "country_id": "FI",
+      "domain_id": "supply_route_disruption",
+      "timestamp": "2026-04-06T00:00:00",
+      "velocity_deviation": 1.2871516755013022,
+      "type": "statistical_anomaly"
+    },
+    {
+      "country_id": "FI",
+      "domain_id": "comms_logistics_stress",
+      "timestamp": "2026-04-06T00:00:00",
+      "velocity_deviation": 4.651020910698181,
+      "type": "statistical_anomaly"
+    },
+    {
+      "country_id": "LV",
+      "domain_id": "supply_route_disruption",
+      "timestamp": "2026-04-12T00:00:00",
+      "velocity_deviation": 1.6781507111873606,
+      "type": "statistical_anomaly"
+    },
+    {
+      "country_id": "LV",
+      "domain_id": "infrastructure_vulnerability",
+      "timestamp": "2026-04-19T00:00:00",
+      "velocity_deviation": 1.936298499250082,
+      "type": "statistical_anomaly"
+    },
+    {
+      "country_id": "LT",
+      "domain_id": "comms_logistics_stress",
+      "timestamp": "2026-04-26T00:00:00",
+      "velocity_deviation": 3.323736377298855,
+      "type": "statistical_anomaly"
+    },
+    {
+      "country_id": "LT",
+      "domain_id": "infrastructure_vulnerability",
+      "timestamp": "2026-08-02T00:00:00",
+      "velocity_deviation": 1.8525810153285647,
+      "type": "statistical_anomaly"
+    }
+  ]
+}

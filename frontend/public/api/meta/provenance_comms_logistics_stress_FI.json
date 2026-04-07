@@ -1,0 +1,36 @@
+{
+  "domain_id": "comms_logistics_stress",
+  "country_id": "FI",
+  "indicators_used": [
+    {
+      "id": "telecom_cable_status",
+      "name": "Telecom Cable Health Score",
+      "source": "static",
+      "unit": "score",
+      "direction": "lower_is_worse",
+      "normalization": "minmax",
+      "weight": 0.5,
+      "description": "Fraction of known Baltic telecom cables operational."
+    },
+    {
+      "id": "baltic_shipping_index",
+      "name": "Baltic Shipping Stress Proxy",
+      "source": "static",
+      "unit": "index",
+      "direction": "higher_is_worse",
+      "normalization": "minmax",
+      "weight": 0.25,
+      "description": "Proxy for shipping disruption from insurance rate changes."
+    },
+    {
+      "id": "cross_border_transit_delays",
+      "name": "Cross-Border Transit Delays",
+      "source": "static",
+      "unit": "hours",
+      "direction": "higher_is_worse",
+      "normalization": "minmax",
+      "weight": 0.25,
+      "description": "Average delay at Baltic border crossings."
+    }
+  ]
+}

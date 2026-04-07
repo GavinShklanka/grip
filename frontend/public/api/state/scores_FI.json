@@ -1,0 +1,54 @@
+{
+  "country_id": "FI",
+  "domains": [
+    {
+      "domain_id": "energy_dependence",
+      "score": 0.0,
+      "velocity": 0.0,
+      "data_coverage": 0.0,
+      "anomaly_flag": false
+    },
+    {
+      "domain_id": "infrastructure_vulnerability",
+      "score": 3.018817975359362,
+      "velocity": -1.3533437451368606,
+      "data_coverage": 0.15,
+      "anomaly_flag": false
+    },
+    {
+      "domain_id": "supply_route_disruption",
+      "score": 11.272187652197823,
+      "velocity": 0.766111512084669,
+      "data_coverage": 0.35,
+      "anomaly_flag": false
+    },
+    {
+      "domain_id": "sanctions_pressure",
+      "score": 0.0,
+      "velocity": 0.0,
+      "data_coverage": 0.0,
+      "anomaly_flag": false
+    },
+    {
+      "domain_id": "geopolitical_tension",
+      "score": 0.0,
+      "velocity": 0.0,
+      "data_coverage": 0.0,
+      "anomaly_flag": false
+    },
+    {
+      "domain_id": "comms_logistics_stress",
+      "score": 14.086636446030113,
+      "velocity": -1.6425353198154125,
+      "data_coverage": 0.5,
+      "anomaly_flag": false
+    },
+    {
+      "domain_id": "escalation_composite",
+      "score": 3.280656294123654,
+      "velocity": null,
+      "data_coverage": 0.8200000000000001,
+      "anomaly_flag": false
+    }
+  ]
+}

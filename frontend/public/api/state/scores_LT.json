@@ -1,0 +1,54 @@
+{
+  "country_id": "LT",
+  "domains": [
+    {
+      "domain_id": "energy_dependence",
+      "score": 0.0,
+      "velocity": 0.0,
+      "data_coverage": 0.0,
+      "anomaly_flag": false
+    },
+    {
+      "domain_id": "infrastructure_vulnerability",
+      "score": 0.8078983162236035,
+      "velocity": -0.5614678633875966,
+      "data_coverage": 0.15,
+      "anomaly_flag": false
+    },
+    {
+      "domain_id": "supply_route_disruption",
+      "score": 11.785727816008203,
+      "velocity": 0.2319492531950156,
+      "data_coverage": 0.35,
+      "anomaly_flag": false
+    },
+    {
+      "domain_id": "sanctions_pressure",
+      "score": 0.0,
+      "velocity": 0.0,
+      "data_coverage": 0.0,
+      "anomaly_flag": false
+    },
+    {
+      "domain_id": "geopolitical_tension",
+      "score": 0.0,
+      "velocity": 0.0,
+      "data_coverage": 0.0,
+      "anomaly_flag": false
+    },
+    {
+      "domain_id": "comms_logistics_stress",
+      "score": 26.392602921021656,
+      "velocity": -1.7649609871863865,
+      "data_coverage": 0.5,
+      "anomaly_flag": false
+    },
+    {
+      "domain_id": "escalation_composite",
+      "score": 3.7769210401174673,
+      "velocity": null,
+      "data_coverage": 0.8200000000000001,
+      "anomaly_flag": false
+    }
+  ]
+}

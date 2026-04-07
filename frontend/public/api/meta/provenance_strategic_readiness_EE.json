@@ -1,0 +1,36 @@
+{
+  "domain_id": "strategic_readiness",
+  "country_id": "EE",
+  "indicators_used": [
+    {
+      "id": "defense_spending_trend",
+      "name": "Defense Spending Trend (3-year)",
+      "source": "static",
+      "unit": "percent_change",
+      "direction": "lower_is_worse",
+      "normalization": "minmax",
+      "weight": 0.35,
+      "description": "3-year trend in defense spending. Declining = less prepared."
+    },
+    {
+      "id": "reserve_to_active_ratio",
+      "name": "Reserve-to-Active Military Ratio",
+      "source": "static",
+      "unit": "ratio",
+      "direction": "lower_is_worse",
+      "normalization": "minmax",
+      "weight": 0.3,
+      "description": "Ratio of reserve to active military personnel. Aggregate only."
+    },
+    {
+      "id": "industrial_capacity_utilization",
+      "name": "Industrial Capacity Utilization",
+      "source": "eurostat",
+      "unit": "percent",
+      "direction": "higher_is_worse",
+      "normalization": "minmax",
+      "weight": 0.35,
+      "description": "High utilization = less surge capacity for crisis response."
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 import { useLocation, Routes, Route, NavLink } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Scroll, Monitor, Graph, Target, BookOpen } from '@phosphor-icons/react'
-import { fetchScores } from './api'
+import { Scroll, Monitor, Graph, Target, BookOpen, Database } from '@phosphor-icons/react'
+import { fetchScores, STATIC_MODE } from './api'
 
 import StoryPage from './pages/StoryPage'
 import GlobalOverview from './pages/GlobalOverview'
@@ -60,6 +60,17 @@ export default function App() {
           })}
         </div>
       </nav>
+
+      {/* Static Mode Indicator */}
+      {STATIC_MODE && (
+        <div className="flex items-center justify-center gap-2 px-6 py-1.5 text-xs font-bold uppercase tracking-wider"
+             style={{ background: '#0c4a6e', color: '#7dd3fc', borderBottom: '1px solid #0369a1' }}>
+          <Database size={14} weight="bold" />
+          <span>Portfolio Mode — Pre-computed data snapshot</span>
+          <span className="hidden sm:inline" style={{ color: '#38bdf8' }}>·</span>
+          <span className="hidden sm:inline" style={{ color: '#38bdf8', fontWeight: 500 }}>Run locally for live analysis</span>
+        </div>
+      )}
 
       {/* Routes */}
       <main className="flex-1 p-6 relative overflow-auto">

@@ -1,0 +1,46 @@
+{
+  "domain_id": "supply_route_disruption",
+  "country_id": "EE",
+  "indicators_used": [
+    {
+      "id": "cross_border_flow_anomaly",
+      "name": "Cross-Border Flow Anomaly Score",
+      "source": "entso_e",
+      "unit": "z_score",
+      "direction": "higher_is_worse",
+      "normalization": "percentile",
+      "weight": 0.35,
+      "description": "Z-score deviation of current flows from 30-day rolling mean. Large negative = unusual drop."
+    },
+    {
+      "id": "gas_flow_disruption",
+      "name": "Gas Flow Disruption Indicator",
+      "source": "entsog",
+      "unit": "z_score",
+      "direction": "higher_is_worse",
+      "normalization": "percentile",
+      "weight": 0.3,
+      "description": "Z-score of gas flows vs 30-day mean. Abrupt drops flag disruption."
+    },
+    {
+      "id": "telecom_cables_offline",
+      "name": "Telecom Cables Offline",
+      "source": "static",
+      "unit": "count",
+      "direction": "higher_is_worse",
+      "normalization": "minmax",
+      "weight": 0.2,
+      "description": "Count of known Baltic telecom cable outages."
+    },
+    {
+      "id": "corridor_alternative_available",
+      "name": "Alternative Route Availability (inverted)",
+      "source": "computed",
+      "unit": "boolean",
+      "direction": "lower_is_worse",
+      "normalization": "minmax",
+      "weight": 0.15,
+      "description": "Whether bypass routes exist for disrupted corridors. 0 = no alternative."
+    }
+  ]
+}

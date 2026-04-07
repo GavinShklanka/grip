@@ -1,0 +1,54 @@
+{
+  "country_id": "LV",
+  "domains": [
+    {
+      "domain_id": "energy_dependence",
+      "score": 0.0,
+      "velocity": 0.0,
+      "data_coverage": 0.0,
+      "anomaly_flag": false
+    },
+    {
+      "domain_id": "infrastructure_vulnerability",
+      "score": 0.14904671178479417,
+      "velocity": -1.8775234942856132,
+      "data_coverage": 0.15,
+      "anomaly_flag": false
+    },
+    {
+      "domain_id": "supply_route_disruption",
+      "score": 6.289598369802659,
+      "velocity": -1.011127439141864,
+      "data_coverage": 0.35,
+      "anomaly_flag": false
+    },
+    {
+      "domain_id": "sanctions_pressure",
+      "score": 0.0,
+      "velocity": 0.0,
+      "data_coverage": 0.0,
+      "anomaly_flag": false
+    },
+    {
+      "domain_id": "geopolitical_tension",
+      "score": 0.0,
+      "velocity": 0.0,
+      "data_coverage": 0.0,
+      "anomaly_flag": false
+    },
+    {
+      "domain_id": "comms_logistics_stress",
+      "score": 47.860495590100165,
+      "velocity": 0.2133403343488445,
+      "data_coverage": 0.5,
+      "anomaly_flag": false
+    },
+    {
+      "domain_id": "escalation_composite",
+      "score": 4.32348378913437,
+      "velocity": null,
+      "data_coverage": 0.8200000000000001,
+      "anomaly_flag": false
+    }
+  ]
+}

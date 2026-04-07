@@ -1,0 +1,36 @@
+{
+  "domain_id": "sanctions_pressure",
+  "country_id": "EE",
+  "indicators_used": [
+    {
+      "id": "sanctions_entity_count",
+      "name": "Active Sanctions Entities (Baltic-relevant)",
+      "source": "opensanctions",
+      "unit": "count",
+      "direction": "higher_is_worse",
+      "normalization": "minmax",
+      "weight": 0.3,
+      "description": "Count of EU-sanctioned entities relevant to Baltic energy/trade."
+    },
+    {
+      "id": "trade_volume_delta",
+      "name": "Trade Volume Change (HS 27xx)",
+      "source": "eurostat",
+      "unit": "percent_change",
+      "direction": "contextual",
+      "normalization": "minmax",
+      "weight": 0.3,
+      "description": "Month-over-month change in mineral fuel trade volume."
+    },
+    {
+      "id": "shadow_fleet_count",
+      "name": "Shadow Fleet Vessels in Baltic",
+      "source": "static",
+      "unit": "count",
+      "direction": "higher_is_worse",
+      "normalization": "minmax",
+      "weight": 0.4,
+      "description": "Estimated count of shadow fleet vessels transiting Baltic Sea."
+    }
+  ]
+}

@@ -15,10 +15,13 @@ const queryClient = new QueryClient({
   },
 })
 
+// base path from Vite config — '/grip/' in production, '/' in dev
+const basename = import.meta.env.BASE_URL || '/'
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
+      <BrowserRouter basename={basename}>
         <App />
       </BrowserRouter>
     </QueryClientProvider>

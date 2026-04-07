@@ -1,0 +1,36 @@
+{
+  "margins": [
+    {
+      "country_id": "FI",
+      "available_import_mw": 1008.0,
+      "demand_mw": 14500.0,
+      "reserve_requirement_mw": 0.0,
+      "margin_mw": 6858.0,
+      "status": "green"
+    },
+    {
+      "country_id": "EE",
+      "available_import_mw": 2508.0,
+      "demand_mw": 1600.0,
+      "reserve_requirement_mw": 500.0,
+      "margin_mw": 1708.0,
+      "status": "green"
+    },
+    {
+      "country_id": "LV",
+      "available_import_mw": 2700.0,
+      "demand_mw": 1300.0,
+      "reserve_requirement_mw": 500.0,
+      "margin_mw": 2300.0,
+      "status": "green"
+    },
+    {
+      "country_id": "LT",
+      "available_import_mw": 2100.0,
+      "demand_mw": 2100.0,
+      "reserve_requirement_mw": 500.0,
+      "margin_mw": 2500.0,
+      "status": "green"
+    }
+  ]
+}

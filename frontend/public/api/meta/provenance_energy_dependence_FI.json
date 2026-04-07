@@ -1,0 +1,56 @@
+{
+  "domain_id": "energy_dependence",
+  "country_id": "FI",
+  "indicators_used": [
+    {
+      "id": "electricity_import_ratio",
+      "name": "Electricity Import Ratio",
+      "source": "entso_e",
+      "unit": "ratio",
+      "direction": "higher_is_worse",
+      "normalization": "minmax",
+      "weight": 0.2,
+      "description": "Net imports / total consumption. Higher = more dependent."
+    },
+    {
+      "id": "gas_import_concentration",
+      "name": "Gas Import Source Concentration",
+      "source": "entsog",
+      "unit": "hhi",
+      "direction": "higher_is_worse",
+      "normalization": "minmax",
+      "weight": 0.15,
+      "description": "HHI of gas import sources. Single-source = high concentration."
+    },
+    {
+      "id": "estlink_utilization",
+      "name": "Estlink Utilization Rate",
+      "source": "entso_e",
+      "unit": "ratio",
+      "direction": "higher_is_worse",
+      "normalization": "minmax",
+      "weight": 0.15,
+      "description": "Average flow / total Estlink capacity. Near 1.0 = no headroom."
+    },
+    {
+      "id": "lng_utilization",
+      "name": "LNG Terminal Utilization",
+      "source": "entsog",
+      "unit": "ratio",
+      "direction": "higher_is_worse",
+      "normalization": "minmax",
+      "weight": 0.1,
+      "description": "LNG sendout / terminal capacity. High utilization = low buffer."
+    },
+    {
+      "id": "interconnectors_offline",
+      "name": "Interconnectors Currently Offline",
+      "source": "entso_e",
+      "unit": "count",
+      "direction": "higher_is_worse",
+      "normalization": "minmax",
+      "weight": 0.4,
+      "description": "Count of major interconnectors currently in unplanned outage."
+    }
+  ]
+}
