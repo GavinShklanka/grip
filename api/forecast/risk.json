@@ -1,0 +1,24 @@
+{
+  "predictions": [
+    {
+      "country_id": "EE",
+      "timestamp": "2026-04-07T00:00:00",
+      "risk_probability": 0.19356886778441548
+    },
+    {
+      "country_id": "LT",
+      "timestamp": "2026-04-07T00:00:00",
+      "risk_probability": 0.20817495607934697
+    },
+    {
+      "country_id": "LV",
+      "timestamp": "2026-04-07T00:00:00",
+      "risk_probability": 0.20452374852287217
+    },
+    {
+      "country_id": "FI",
+      "timestamp": "2026-04-07T00:00:00",
+      "risk_probability": 0.25056297064147254
+    }
+  ]
+}

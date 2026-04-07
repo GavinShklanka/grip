@@ -1,0 +1,36 @@
+{
+  "domain_id": "geopolitical_tension",
+  "country_id": "LT",
+  "indicators_used": [
+    {
+      "id": "gdelt_event_intensity",
+      "name": "GDELT Event Intensity (Baltic+Russia)",
+      "source": "gdelt",
+      "unit": "events_per_week",
+      "direction": "higher_is_worse",
+      "normalization": "percentile",
+      "weight": 0.4,
+      "description": "Weekly count of conflict/coercion events involving Baltic + Russia actors."
+    },
+    {
+      "id": "gdelt_tone_avg",
+      "name": "GDELT Average Tone (Baltic+Russia)",
+      "source": "gdelt",
+      "unit": "tone_score",
+      "direction": "lower_is_worse",
+      "normalization": "minmax",
+      "weight": 0.3,
+      "description": "Average media tone. Negative tone = elevated tension."
+    },
+    {
+      "id": "diplomatic_incident_count",
+      "name": "Diplomatic Incidents",
+      "source": "gdelt",
+      "unit": "count",
+      "direction": "higher_is_worse",
+      "normalization": "minmax",
+      "weight": 0.3,
+      "description": "Ambassador recalls, expulsions, protests from GDELT CAMEO codes."
+    }
+  ]
+}

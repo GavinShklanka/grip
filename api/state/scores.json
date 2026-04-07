@@ -1,0 +1,228 @@
+{
+  "scores": [
+    {
+      "country_id": "EE",
+      "domain_id": "comms_logistics_stress",
+      "score": 50.0,
+      "velocity": 0.0,
+      "timestamp": "2026-12-27T00:00:00",
+      "data_coverage": 0.5
+    },
+    {
+      "country_id": "EE",
+      "domain_id": "energy_dependence",
+      "score": 0.0,
+      "velocity": 0.0,
+      "timestamp": "2026-12-27T00:00:00",
+      "data_coverage": 0.0
+    },
+    {
+      "country_id": "EE",
+      "domain_id": "escalation_composite",
+      "score": 5.75,
+      "velocity": null,
+      "timestamp": "2026-12-27T00:00:00",
+      "data_coverage": 0.8200000000000001
+    },
+    {
+      "country_id": "EE",
+      "domain_id": "geopolitical_tension",
+      "score": 0.0,
+      "velocity": 0.0,
+      "timestamp": "2026-12-27T00:00:00",
+      "data_coverage": 0.0
+    },
+    {
+      "country_id": "EE",
+      "domain_id": "infrastructure_vulnerability",
+      "score": 0.0,
+      "velocity": 0.0,
+      "timestamp": "2026-12-27T00:00:00",
+      "data_coverage": 0.15
+    },
+    {
+      "country_id": "EE",
+      "domain_id": "sanctions_pressure",
+      "score": 0.0,
+      "velocity": 0.0,
+      "timestamp": "2026-12-27T00:00:00",
+      "data_coverage": 0.0
+    },
+    {
+      "country_id": "EE",
+      "domain_id": "supply_route_disruption",
+      "score": 15.0,
+      "velocity": 0.0,
+      "timestamp": "2026-12-27T00:00:00",
+      "data_coverage": 0.35
+    },
+    {
+      "country_id": "FI",
+      "domain_id": "comms_logistics_stress",
+      "score": 14.086636446030113,
+      "velocity": -1.6425353198154125,
+      "timestamp": "2026-12-27T00:00:00",
+      "data_coverage": 0.5
+    },
+    {
+      "country_id": "FI",
+      "domain_id": "energy_dependence",
+      "score": 0.0,
+      "velocity": 0.0,
+      "timestamp": "2026-12-27T00:00:00",
+      "data_coverage": 0.0
+    },
+    {
+      "country_id": "FI",
+      "domain_id": "escalation_composite",
+      "score": 3.280656294123654,
+      "velocity": null,
+      "timestamp": "2026-12-27T00:00:00",
+      "data_coverage": 0.8200000000000001
+    },
+    {
+      "country_id": "FI",
+      "domain_id": "geopolitical_tension",
+      "score": 0.0,
+      "velocity": 0.0,
+      "timestamp": "2026-12-27T00:00:00",
+      "data_coverage": 0.0
+    },
+    {
+      "country_id": "FI",
+      "domain_id": "infrastructure_vulnerability",
+      "score": 3.018817975359362,
+      "velocity": -1.3533437451368606,
+      "timestamp": "2026-12-27T00:00:00",
+      "data_coverage": 0.15
+    },
+    {
+      "country_id": "FI",
+      "domain_id": "sanctions_pressure",
+      "score": 0.0,
+      "velocity": 0.0,
+      "timestamp": "2026-12-27T00:00:00",
+      "data_coverage": 0.0
+    },
+    {
+      "country_id": "FI",
+      "domain_id": "supply_route_disruption",
+      "score": 11.272187652197823,
+      "velocity": 0.766111512084669,
+      "timestamp": "2026-12-27T00:00:00",
+      "data_coverage": 0.35
+    },
+    {
+      "country_id": "LT",
+      "domain_id": "comms_logistics_stress",
+      "score": 26.392602921021656,
+      "velocity": -1.7649609871863865,
+      "timestamp": "2026-12-27T00:00:00",
+      "data_coverage": 0.5
+    },
+    {
+      "country_id": "LT",
+      "domain_id": "energy_dependence",
+      "score": 0.0,
+      "velocity": 0.0,
+      "timestamp": "2026-12-27T00:00:00",
+      "data_coverage": 0.0
+    },
+    {
+      "country_id": "LT",
+      "domain_id": "escalation_composite",
+      "score": 3.7769210401174673,
+      "velocity": null,
+      "timestamp": "2026-12-27T00:00:00",
+      "data_coverage": 0.8200000000000001
+    },
+    {
+      "country_id": "LT",
+      "domain_id": "geopolitical_tension",
+      "score": 0.0,
+      "velocity": 0.0,
+      "timestamp": "2026-12-27T00:00:00",
+      "data_coverage": 0.0
+    },
+    {
+      "country_id": "LT",
+      "domain_id": "infrastructure_vulnerability",
+      "score": 0.8078983162236035,
+      "velocity": -0.5614678633875966,
+      "timestamp": "2026-12-27T00:00:00",
+      "data_coverage": 0.15
+    },
+    {
+      "country_id": "LT",
+      "domain_id": "sanctions_pressure",
+      "score": 0.0,
+      "velocity": 0.0,
+      "timestamp": "2026-12-27T00:00:00",
+      "data_coverage": 0.0
+    },
+    {
+      "country_id": "LT",
+      "domain_id": "supply_route_disruption",
+      "score": 11.785727816008203,
+      "velocity": 0.2319492531950156,
+      "timestamp": "2026-12-27T00:00:00",
+      "data_coverage": 0.35
+    },
+    {
+      "country_id": "LV",
+      "domain_id": "comms_logistics_stress",
+      "score": 47.860495590100165,
+      "velocity": 0.2133403343488445,
+      "timestamp": "2026-12-27T00:00:00",
+      "data_coverage": 0.5
+    },
+    {
+      "country_id": "LV",
+      "domain_id": "energy_dependence",
+      "score": 0.0,
+      "velocity": 0.0,
+      "timestamp": "2026-12-27T00:00:00",
+      "data_coverage": 0.0
+    },
+    {
+      "country_id": "LV",
+      "domain_id": "escalation_composite",
+      "score": 4.32348378913437,
+      "velocity": null,
+      "timestamp": "2026-12-27T00:00:00",
+      "data_coverage": 0.8200000000000001
+    },
+    {
+      "country_id": "LV",
+      "domain_id": "geopolitical_tension",
+      "score": 0.0,
+      "velocity": 0.0,
+      "timestamp": "2026-12-27T00:00:00",
+      "data_coverage": 0.0
+    },
+    {
+      "country_id": "LV",
+      "domain_id": "infrastructure_vulnerability",
+      "score": 0.14904671178479417,
+      "velocity": -1.8775234942856132,
+      "timestamp": "2026-12-27T00:00:00",
+      "data_coverage": 0.15
+    },
+    {
+      "country_id": "LV",
+      "domain_id": "sanctions_pressure",
+      "score": 0.0,
+      "velocity": 0.0,
+      "timestamp": "2026-12-27T00:00:00",
+      "data_coverage": 0.0
+    },
+    {
+      "country_id": "LV",
+      "domain_id": "supply_route_disruption",
+      "score": 6.289598369802659,
+      "velocity": -1.011127439141864,
+      "timestamp": "2026-12-27T00:00:00",
+      "data_coverage": 0.35
+    }
+  ]
+}

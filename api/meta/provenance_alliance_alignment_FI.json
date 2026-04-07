@@ -1,0 +1,36 @@
+{
+  "domain_id": "alliance_alignment",
+  "country_id": "FI",
+  "indicators_used": [
+    {
+      "id": "defense_spending_gdp",
+      "name": "Defense Spending (% GDP)",
+      "source": "static",
+      "unit": "percent",
+      "direction": "contextual",
+      "normalization": "minmax",
+      "weight": 0.35,
+      "description": "NATO guideline is 2%. Below 2% = below commitment."
+    },
+    {
+      "id": "nato_exercise_frequency",
+      "name": "NATO Exercise Frequency (Baltic region)",
+      "source": "gdelt",
+      "unit": "events_per_quarter",
+      "direction": "contextual",
+      "normalization": "minmax",
+      "weight": 0.35,
+      "description": "Count of NATO exercise events in Baltic region from GDELT."
+    },
+    {
+      "id": "alliance_voting_alignment",
+      "name": "UNGA Voting Alignment",
+      "source": "static",
+      "unit": "score",
+      "direction": "lower_is_worse",
+      "normalization": "minmax",
+      "weight": 0.3,
+      "description": "Voting alignment between Baltic states and key NATO allies."
+    }
+  ]
+}

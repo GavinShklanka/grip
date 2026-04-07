@@ -1,0 +1,40 @@
+{
+  "scenarios": [
+    {
+      "id": "balticconnector_damage",
+      "name": "Balticconnector Pipeline Damage",
+      "category": "pipeline",
+      "description": "Loss of Balticconnector gas pipeline (7.2 mcm/day). Modeled after Oct 2023 Newnew Polar Bear incident."
+    },
+    {
+      "id": "estlink2_severance",
+      "name": "Estlink 2 Severance",
+      "category": "submarine_cable",
+      "description": "Loss of Estlink 2 submarine cable (650 MW). Modeled after Dec 2024 Eagle S incident."
+    },
+    {
+      "id": "litpol_failure",
+      "name": "LitPol Link Failure",
+      "category": "corridor",
+      "description": "Loss of sole synchronous AC connection to Continental Europe. Baltics forced into island mode."
+    },
+    {
+      "id": "lng_supply_shock",
+      "name": "LNG Supply Shock",
+      "category": "energy",
+      "description": "Klaip\u0117da LNG terminal offline (maintenance or supply disruption). 3.75 bcm/year capacity lost."
+    },
+    {
+      "id": "multi_cable_attack",
+      "name": "Multi-Infrastructure Attack",
+      "category": "multi_domain",
+      "description": "Simultaneous loss of Estlink 2 and Estlink 1. Modeled after Jan 2026 simultaneous trip (both Estlinks lost)."
+    },
+    {
+      "id": "sanctions_escalation",
+      "name": "Sanctions Escalation",
+      "category": "sanctions",
+      "description": "Major new sanctions tranche affecting Baltic transit trade and shadow fleet operations."
+    }
+  ]
+}

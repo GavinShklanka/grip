@@ -1,0 +1,4 @@
+{
+  "status": "healthy",
+  "description": "Calculated via staleness decay mappings directly inside Domain integration endpoints."
+}
